@@ -1,0 +1,144 @@
+.modal {
+  background: #0000008c;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #fff;
+    outline: none;
+    border: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    img {
+      width: 40px;
+      z-index: 99999;
+      fill: red;
+    }
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
+  }
+  .status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgb(6 18 79 / 67%);
+    margin: 20px 0px;
+    padding: 12px;
+
+    div {
+      margin: 0px 20px;
+      font-size: 14px;
+
+      b {
+        margin-right: 4px;
+        font-weight: 500;
+        color: #ffffff94;
+
+        &::after {
+          content: ":";
+        }
+      }
+    }
+  }
+}
+
+.box {
+  background: rgb(56 78 189 / 41%);
+  border: 3px solid rgb(56 78 189 / 41%);
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 700px;
+  position: relative;
+}
+
+.graph {
+  min-width: 100%;
+  max-width: 900px;
+  max-height: 700px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px 0px;
+
+  .active {
+    border: 2px solid #ffffffb0;
+  }
+
+  button {
+    background: #34428d78;
+    border: 2px solid #3a4997;
+    color: #ffffff;
+    font-weight: 300;
+    outline: unset;
+    margin: 0px 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: rgb(52 66 141 / 97%);
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .graph {
+    width: 200px;
+  }
+  .modal {
+    .status {
+      div {
+        b {
+          display: flex;
+          flex-direction: column;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  .graph {
+    width: 150px;
+  }
+  .modal {
+    .box {
+      margin: 0px 10px;
+    }
+  }
+}

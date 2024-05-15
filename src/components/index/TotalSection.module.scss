@@ -1,0 +1,77 @@
+.totalsection {
+  background: #00000052;
+  border-radius: 30px;
+  padding: 20px 20px 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.totalstatus {
+  display: flex;
+  align-items: center;
+  div {
+    border-right: 1px solid #ffffff3a;
+    padding-right: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+
+    &:last-child {
+      border-right: unset;
+    }
+
+    b {
+      font-weight: 300;
+      color: #ffffff81;
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.totalpercentage {
+  div {
+    padding: 15px;
+    background: #0000005e;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+      background: rgb(20 38 131 / 54%);
+      margin-bottom: 16px;
+      border: 2px solid rgb(55 78 196 / 23%);
+      font-weight: 500;
+    }
+
+    b {
+      font-weight: 300;
+    }
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .totalsection {
+    flex-direction: column;
+
+    .totalstatus {
+      margin-bottom: 20px;
+      > div {
+        font-size: 18px;
+        margin: 10px;
+        padding: unset;
+
+        &:first-child {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}

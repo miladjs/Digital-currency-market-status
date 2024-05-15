@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  max-width: 100vw;
+}
+
+body {
+  background: linear-gradient(86deg, #05022d 15.29%, #001683 93.86%);
+  color: #fff;
+  font-family: "Poppins";
+  max-width: 100vw;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+.warpper {
+  max-width: 1280px;
+  margin: 50px auto;
+}
+
+.mapbackground {
+  position: fixed;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  filter: blur(6px);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  margin-top: 100px;
+
+  a {
+    color: #ffffff65;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .warpper {
+    padding: 10px;
+  }
+}
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+  }
+}

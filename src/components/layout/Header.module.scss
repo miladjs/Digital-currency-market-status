@@ -1,0 +1,142 @@
+.header {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+  font-size: 22px;
+  b {
+    font-weight: 500;
+  }
+  span {
+    font-weight: 300;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  > div {
+    position: relative;
+    z-index: 9999;
+    max-width: 100%;
+    ul {
+      list-style: none;
+    }
+    .active {
+      visibility: visible !important;
+    }
+    .searchbox {
+      visibility: hidden;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      padding: 10px 10px;
+      position: absolute;
+      width: 100%;
+      top: 60px;
+      z-index: 9999;
+      backdrop-filter: blur(34px);
+      max-height: 400px;
+      overflow-y: scroll;
+      height: fit-content;
+
+      li {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+
+        &:hover {
+          background: #ffffff59;
+          cursor: pointer;
+        }
+
+        b {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        img {
+          margin-right: 10px;
+          width: 19px;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  select {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffffe0;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: unset;
+    outline: unset;
+
+    option {
+      color: #000;
+    }
+  }
+
+  > div {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(17.91669464111328px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 20px;
+    border-radius: 10px;
+    flex-shrink: 0;
+
+    svg {
+      font-size: 22px;
+    }
+
+    input {
+      background: unset;
+      outline: unset;
+      border: unset;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 300;
+
+      &::placeholder {
+        color: #ffffff60;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .header {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      justify-content: center;
+      display: flex;
+      margin-bottom: 40px;
+    }
+    .to2224ss {
+    }
+    .search {
+      flex-direction: column;
+      padding: 0px 10px;
+
+      select {
+        margin-right: unset;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

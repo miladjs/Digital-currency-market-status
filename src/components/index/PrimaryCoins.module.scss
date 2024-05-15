@@ -1,0 +1,119 @@
+.primarycoins {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  margin: 70px 0px 50px;
+}
+
+.coincard {
+  background-image: url("image/cardbg.svg");
+  background: rgba(20, 38, 131, 0.54);
+  border: 3px solid rgb(255 255 255 / 5%);
+  filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.13));
+  backdrop-filter: blur(20px);
+  padding: 30px 20px;
+  border-radius: 30px;
+  flex-shrink: 0px;
+  --smooth-corners: 4.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+  span {
+    margin: 0px 1px;
+  }
+  .icon {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: -25px;
+    background: rgb(255 255 255 / 20%);
+    border: 3px solid rgb(255 255 255 / 5%);
+    filter: drop-shadow(0px 15px 35px rgba(0, 0, 0, 0.13));
+    backdrop-filter: blur(40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 15px;
+    img {
+      max-width: 30px;
+    }
+  }
+  .name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+  .price {
+    font-size: 28px;
+    margin-bottom: 4px;
+    font-weight: 300;
+  }
+  .tottal {
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px 15px;
+    background: linear-gradient(
+      -270deg,
+      rgba(0, 0, 0, 0.17) 0.09%,
+      rgba(0, 0, 0, 0) 78.92%
+    );
+    margin-bottom: 8px;
+
+    b {
+      font-size: 12px;
+      margin-left: 5px;
+      font-weight: 300;
+      opacity: 0.4;
+    }
+  }
+  .oneday {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.13);
+    display: flex;
+    align-items: center;
+    padding: 8px 17px;
+    font-size: 14px;
+    margin-top: 15px;
+
+    .percent {
+      margin-left: 12px;
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+      span {
+        margin-top: 2px;
+        margin-right: 4px;
+        font-weight: 300;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.28);
+        padding: 2px 4px;
+        font-size: 13px;
+      }
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .primarycoins {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 780px) {
+  .primarycoins {
+    grid-template-columns: 1fr;
+  }
+}
