@@ -9,7 +9,6 @@ https://market.wijo.ir
 ## dependencies
 
 - Reactjs
-- Typescript
 - sass
 - recharts
 - react-icons
